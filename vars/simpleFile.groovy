@@ -10,7 +10,7 @@ def call () {
     stages {
         stage ('SCM') {
             steps {
-                git url: 'https://github.com/AmrutAnkalagi/nopCommerce_13Apr2025.git',
+                git url: 'https://github.com/nopSolutions/nopCommerce.git',
                     branch: 'develop'
             }    
         }
