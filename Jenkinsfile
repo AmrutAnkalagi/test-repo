@@ -23,7 +23,7 @@ pipeline {
         }
         stage ('Containerization') {
             steps {
-                sh 'docker run -it -d --name hell -p 9009:8080 firstbuild/demo'
+                sh 'docker run -it -d -P firstbuild/demo'
             }
         }
         stage ('Login to Docker Hub') {
