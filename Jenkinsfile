@@ -18,12 +18,12 @@ pipeline {
         }
         stage ('Docker Build') {
             steps {
-                sh 'docker image build -t firstbuild/demo .'
+                sh 'docker image build -t amrutankalagi19/ci_push_repo .'
             }
         }
         stage ('Containerization') {
             steps {
-                sh 'docker run -it -d -P firstbuild/demo'
+                sh 'docker run -it -d -P amrutankalagi19/ci_push_repo'
             }
         }
         stage ('Login to Docker Hub') {
@@ -39,7 +39,7 @@ pipeline {
         }
         stage ('Push To DockerHub') {
             steps {
-                sh 'docker push firstbuild/demo'
+                sh 'docker push amrutankalagi19/ci_push_repo:latest'
             }
         }
     }
